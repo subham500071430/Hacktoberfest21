@@ -25,7 +25,6 @@ static int search(int[] a,int li,int ri,int x){
 else
  return search(a,mid+1,ri,x);
 }
-else
 return -1;
 }
 }
