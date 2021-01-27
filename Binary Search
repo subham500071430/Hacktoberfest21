@@ -15,8 +15,8 @@ int ri=n-1;
 System.out.print("Index:"+search(a,li,ri,x));
 }
 static int search(int[] a,int li,int ri,int x){
- if(ri>=1){
- int mid=li+(ri-1)/2;
+ if(ri>=li){
+ int mid=li+(ri-li)/2;
  if(a[mid]==x)
  return mid;
  if(x<a[mid]){
