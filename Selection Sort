@@ -8,7 +8,6 @@ public class solution1 {
 				 min=a[j]; 
 				 index=j;}
 		  }
-		//System.out.print(index+" ");
 		  temp=a[i];
 		  a[i]=min;
 		  a[index]=temp;
