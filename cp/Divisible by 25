@@ -1,0 +1,35 @@
+//Tell the minimum number of digits to be omitted to make the number divisible by 25
+
+import java.lang.String;
+import java.util.Scanner;
+
+public class make {
+
+    public static void converter(String q) {
+
+        String s = q;
+        int l = s.length();
+        int ans = l;
+
+        for (int i = 0; i < l; i++) {
+            for (int j = i + 1; j < l; j++) {
+                int num = Integer.parseInt(String.valueOf(s.charAt(i))) * 10
+                        + Integer.parseInt(String.valueOf(s.charAt(j)));
+                if (num % 25 == 0) {
+                    ans = Math.min(l, (j - i - 1) + (l - 1 - j));
+                }
+            }
+        }
+
+        System.out.println(ans);
+
+    }
+
+    public static void main(String[] args) {
+        Scanner source = new Scanner(System.in);
+        System.out.println("Enter the number");
+        String a;
+        a = source.nextLine();
+        converter(a);
+    }
+}
